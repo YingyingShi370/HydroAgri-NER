@@ -1,63 +1,54 @@
-# 🌾 Hybrid NER for AI-Driven Water & Agricultural Resource Management
+# HydroAgri-NER 🌾
+A Hybrid NER Approach for AI-Driven Water and Agricultural Resource Management
 
-This repository implements a hybrid Named Entity Recognition (NER) framework combining **ontology-guided attention mechanisms** with **deep learning models**, specifically optimized for agricultural and water resource domains.
-
-🚀 Designed for real-world applications such as:
-- Precision irrigation planning  
-- Early detection of crop diseases  
-- Efficient allocation of water in data-scarce regions  
+> AgroNERX is a domain-adapted Named Entity Recognition (NER) framework that integrates ontology-guided attention mechanisms with deep learning. It is designed to extract critical entities from unstructured text in agriculture and water management, enabling more intelligent, scalable, and real-time decision-making for resource-constrained environments.
 
 ---
 
-## 🧠 Key Features
+## 🔍 Highlights
 
-- **ARNF (Adaptive Representation Neural Framework)** for multi-scale semantic feature learning  
-- **ATOS (Adaptive Task Optimization Strategy)** for dynamic multi-task priority balancing  
-- Ontology-integrated attention using domain-specific knowledge  
-- Efficient inference with up to **33% memory reduction** and **~30% latency improvement**  
-- Modular, testable codebase with real and synthetic benchmarks  
+- ✅ **Hybrid Model**: Combines pre-trained transformers with domain ontologies for robust semantic understanding.
+- 🧠 **ARNF**: Multi-scale feature encoder capturing contextual semantics across tokens.
+- 🎯 **ATOS**: Task balancing strategy optimized for heterogeneous and low-resource domains.
+- 🚀 **Fast & Lightweight**: Achieves up to **29.8% latency reduction** and **33.4% memory savings**.
+- 📊 **High Accuracy**: Achieved **95.54% F1** on AgriNLP and **96.75% F1** on FAO-AIMS datasets.
 
 ---
 
-## 📁 Project Structure
+## 📌 Method Overview
+
+<p align="center">
+  <img src="https://your-domain.com/path/to/method_diagram.png" alt="AgroNERX Framework Overview" width="600"/>
+</p>
+
+AgroNERX consists of:
+
+- **ARNF**: Adaptive Representation Neural Framework – semantic feature encoder across multiple linguistic and domain levels.
+- **Ontology-guided Attention**: Leverages agricultural and water-resource ontologies to guide token interactions.
+- **ATOS**: Adaptive Task Optimization Strategy – dynamically adjusts learning focus across subtasks.
+
+---
+
+## 📁 Datasets and Ontologies
+
+We evaluate on two real-world, domain-specific NER datasets:
+
+| Dataset   | Description                                | Format      |
+|-----------|--------------------------------------------|-------------|
+| **AgriNLP**   | Agronomic reports with annotated entities | JSON         |
+| **FAO-AIMS**  | Policy texts in agriculture and irrigation | JSON/XML     |
+
+Ontologies such as [AgroPortal](http://agroportal.lirmm.fr/) are integrated to support knowledge-enhanced tagging.
+
+---
+
+## 🚀 Quick Start
+
+### 🔧 Setup
 
 ```bash
-Hybrid-NER-AgriWater/
-│
-├── appom/                   # Core library
-│   ├── __init__.py
-│   ├── data_loader.py       # Dataset class & tokenizer integration
-│   ├── model.py             # ARNF model implementation
-│   ├── controller.py        # Training/evaluation logic (uses ATOS)
-│   └── utils.py             # Metric calculations, helpers
-│
-├── config/                  # Model and training configurations
-│   ├── default_config.yaml
-│   └── agrinlp_config.yaml
-│
-├── data/                    # Input datasets
-│   ├── raw/                 # Unprocessed source data
-│   │   └── raw_readme.py
-│   └── processed/           # Cleaned and label-aligned NER data
-│       └── processed_readme.py
-│
-├── benchmarks/              # Profiling, ablation, latency & memory tests
-│   ├── latency_tests.py
-│   ├── memory_tests.py
-│   └── ablation_study.ipynb
-│
-├── experiments/             # Shell scripts, result logs
-│   ├── run_experiments.sh
-│   ├── logs/
-│   └── results/
-│
-├── ontology/                # Domain-specific ontology files
-│   └── agri_ontology.owl
-│
-├── tests/                   # Unit tests for model & controller
-│   ├── test_model.py
-│   └── test_controller.py
-│
-├── requirements.txt         # Python dependencies
-├── setup.py                 # Package metadata (to be added)
-└── README.md                # You are here!
+git clone https://github.com/your-username/AgroNERX.git
+cd AgroNERX
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
