@@ -1,4 +1,4 @@
-# 🌾 AgroNERX: Hybrid NER for AI-Driven Water & Agricultural Resource Management
+# 🌾 HydroAgri-NER: Hybrid NER for AI-Driven Water & Agricultural Resource Management
 
 AgroNERX is a hybrid Named Entity Recognition (NER) system that integrates **ontology-guided attention mechanisms** with **deep neural models** to extract structured information from domain-specific, unstructured agricultural and water resource texts. The system is optimized for challenging conditions such as **data scarcity**, **semantic ambiguity**, and **heterogeneous real-world inputs**.
 
